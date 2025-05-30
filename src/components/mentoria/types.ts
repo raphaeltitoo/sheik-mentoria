@@ -1,7 +1,7 @@
 // Declaração para o TypeScript reconhecer o dataLayer
 declare global {
   interface Window {
-    dataLayer: any[]
+    dataLayer: Record<string, unknown>[]
   }
 }
 

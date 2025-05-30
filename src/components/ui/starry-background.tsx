@@ -20,7 +20,6 @@ export function StarryBackground() {
 
       // Configurar o canvas para cobrir toda a tela
       const setCanvasDimensions = () => {
-        const dpr = window.devicePixelRatio || 1
         const displayWidth = window.innerWidth
         const displayHeight = window.innerHeight * 1.5
 

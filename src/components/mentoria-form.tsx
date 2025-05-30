@@ -16,7 +16,7 @@ export default function MentoriaForm() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const raf = requestAnimationFrame(() => {
-        const idleCallback = (window as any).requestIdleCallback || setTimeout
+        const idleCallback = (window as Window & typeof globalThis & { requestIdleCallback?: (callback: () => void) => void }).requestIdleCallback || setTimeout
         idleCallback(() => {
           setMounted(true)
         })

@@ -10,7 +10,7 @@ import { CheckCircle, Loader2, Crown, Calendar, MapPin, Star, DollarSign } from 
 // Declaração para o TypeScript reconhecer o dataLayer
 declare global {
   interface Window {
-    dataLayer: any[]
+    dataLayer: Record<string, unknown>[]
   }
 }
 
@@ -142,7 +142,7 @@ export default function LandingPageClient() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const raf = requestAnimationFrame(() => {
-        const idleCallback = (window as any).requestIdleCallback || setTimeout
+        const idleCallback = (window as Window & typeof globalThis & { requestIdleCallback?: (callback: () => void) => void }).requestIdleCallback || setTimeout
         idleCallback(() => {
           setMounted(true)
         })

@@ -162,7 +162,7 @@ export const useFormSubmission = (formData: FormData, validateForm: () => boolea
           try {
             responseData = JSON.parse(responseText)
             console.log('📋 Dados parseados:', responseData)
-          } catch (parseError) {
+          } catch {
             console.log('⚠️ Resposta não é JSON válido, mantendo como texto')
             responseData = responseText
           }

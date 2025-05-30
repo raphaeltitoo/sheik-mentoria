@@ -60,7 +60,7 @@ export const formatRG = (value: string): string => {
 
 export const formatMargem = (value: string): string => {
   // Remove caracteres não permitidos
-  let cleaned = value.replace(/[^\w\s.,%-kKrR$]/g, "")
+  const cleaned = value.replace(/[^\w\s.,%-kKrR$]/g, "")
   
   // Se o usuário digitou apenas números
   const numbersOnly = cleaned.replace(/[^\d]/g, "")
