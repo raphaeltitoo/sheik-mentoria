@@ -1,5 +1,5 @@
 {
-  "name": "landing-page-nextjs",
+  "name": "sheik-mentoria",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,11 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.3"
+    "next": "15.3.3",
+    "lucide-react": "^0.462.0",
+    "framer-motion": "^12.10.4",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {
     "typescript": "^5",
